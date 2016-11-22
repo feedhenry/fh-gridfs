@@ -1,0 +1,10 @@
+node_modules/
+build/
+dist/
+man/
+output/
+.DS_Store
+.idea
+plato/
+coverage/
+cov-unit/

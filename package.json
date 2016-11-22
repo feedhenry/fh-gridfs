@@ -1,0 +1,42 @@
+{
+  "name": "fh-gridfs",
+  "version": "1.0.4",
+  "description": "Wrapper for file storage using gridfs for mongo databases.",
+  "scripts": {
+    "test": "grunt eslint fh-test",
+    "version": "sed -i.bak \"s/sonar.projectVersion=.*/sonar.projectVersion=${npm_package_version}/\" sonar-project.properties && rm sonar-project.properties.bak && git add sonar-project.properties"
+  },
+  "main": "lib/gridFileManager.js",
+  "repository" : {
+    "type" : "git",
+     "url" : "git@github.com:feedhenry/fh-gridfs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/feedhenry/fh-gridfs/issues"
+  },
+  "author": "FeedHenry",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "archiver": "0.4.9",
+    "async": "0.2.9",
+    "base64-stream": "0.1.2",
+    "gridfs-stream": "0.4.0",
+    "lodash": "2.1.0",
+    "mime": "1.2.11",
+    "mongodb": "2.1.18",
+    "rimraf": "2.2.2",
+    "usage": "^0.7.1"
+  },
+  "devDependencies": {
+    "assert": "0.4.9",
+    "eslint": "^2.7.0",
+    "grunt": "^1.0.1",
+    "grunt-fh-build": "^1.0.1",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.2.4",
+    "util": "0.4.9"
+  },
+  "license": "Apache-2.0"
+}
