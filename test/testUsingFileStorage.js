@@ -302,7 +302,7 @@ var cleanDatabase = function(db, cb) {
 
 var getDatabase = function(dbName, cb) {
   logger.debug("In getDatabase");
-  var server = new Server("localhost", 27017);
+  var server = new Server(process.env.MONGODB_HOST || 'localhost', 27017);
   var database = new Db(dbName, server, {w:1});
   database.open(function(err, db){
     assert.ok(!err);
