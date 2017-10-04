@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     _test_runner: '_mocha',
-    _unit_args: '-A -u exports -t 25000 test/testUsingFileStorage.js',
+    _unit_args: '-A -u exports -t 25000 test/setup_unit.js test/testUsingFileStorage.js',
     unit: '<%= _test_runner %> <%= _unit_args %>',
     unit_cover: 'istanbul cover --dir cov-unit <%= _test_runner %> -- <%= _unit_args %>',
 
