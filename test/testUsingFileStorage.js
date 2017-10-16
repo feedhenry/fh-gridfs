@@ -1020,7 +1020,7 @@ exports.testMigrateMultipleFiles = function(done){
           async.series([
             async.apply(checkFile, databaseDev, saveResults.file1.groupId, "test.zip", 1, "application/zip", undefined),
             async.apply(checkFile, databaseDev, saveResults.file2.groupId, "test.ppt", 1, "application/vnd.ms-powerpoint", undefined),
-            async.apply(checkFile, databaseDev, saveResults.file3.groupId, "test.xml", 1, "application/xml", undefined),
+            async.apply(checkFile, databaseDev, saveResults.file3.groupId, "test.xml", 1, "text/xml", undefined),
             async.apply(checkFile, databaseDev, saveResults.file4.groupId, "test.pdf", 1, "application/pdf", undefined),
             async.apply(checkFile, databaseDev, saveResults.file5.groupId, "test.docx", 1, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", undefined),
             async.apply(checkFile, databaseDev, saveResults.file6.groupId, "test.html", 1, "text/html", undefined)
@@ -1030,7 +1030,7 @@ exports.testMigrateMultipleFiles = function(done){
             async.series([
               async.apply(checkFile, databaseLive, saveResults.file1.groupId, "test.zip", 1, "application/zip", undefined),
               async.apply(checkFile, databaseLive, saveResults.file2.groupId, "test.ppt", 1, "application/vnd.ms-powerpoint", undefined),
-              async.apply(checkFile, databaseLive, saveResults.file3.groupId, "test.xml", 1, "application/xml", undefined),
+              async.apply(checkFile, databaseLive, saveResults.file3.groupId, "test.xml", 1, "text/xml", undefined),
               async.apply(checkFile, databaseLive, saveResults.file4.groupId, "test.pdf", 1, "application/pdf", undefined),
               async.apply(checkFile, databaseLive, saveResults.file5.groupId, "test.docx", 1, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", undefined),
               async.apply(checkFile, databaseLive, saveResults.file6.groupId, "test.html", 1, "text/html", undefined)
@@ -1177,7 +1177,7 @@ exports.testMigrateBothDirections = function(done){
 
                   assert.equal(historyResults.file2History[1].fileName, "test.xml");
                   assert.ok(historyResults.file2History[1].hash);
-                  assert.equal(historyResults.file2History[1].contentType, "application/xml");
+                  assert.equal(historyResults.file2History[1].contentType, "text/xml");
                   assert.equal(historyResults.file2History[1].version, 2);
 
                   assert.equal(historyResults.file2History[2].fileName, "test.mp4");
